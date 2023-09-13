@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambiar Imagen</title>
+    <style>
+      .conatainer-main {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+      }
+      .container-fondo {
+        width: 100%;
+        height: 100%;
+      }
+      .container-img {
+        position: absolute;
+        top: 15%;
+        left: 15%;
+      }
+      .container-img img {
+        width: 20%;
+      }
+      @media screen and (max-width: 1440px) {
+        .conatainer-main {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .conatainer-main {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .conatainer-main {
+          width: 100%;
+          height: 55vh;
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        .conatainer-main {
+          width: 100%;
+          height: 25vh;
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 375px) {
+        .conatainer-main {
+          width: 100%;
+          height: 25vh;
+          position: relative;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .conatainer-main {
+          width: 100%;
+          height: 25vh;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatainer-main">
+      <div class="container-fondo">
+        <img src="img/fondo.png" alt="" style="width: 100%; height: 100%" />
+      </div>
+      <div class="container-img">
+        <img
+          id="miImagen1"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen1','img/Kooltivo.png','img/Animal.png')"
+        />
+        <img
+          id="miImagen5"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen5','img/Kooltivo.png','img/Finanzas.png')"
+        />
+        <img
+          id="miImagen2"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen2','img/Kooltivo.png','img/Equidad.png')"
+        />
+        <img
+          id="miImagen7"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen7','img/Kooltivo.png','img/Tecnologia.png')"
+        />
+        <img
+          id="miImagen"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen','img/Kooltivo.png','img/Animal.png')"
+        />
+        <img
+          id="miImagen6"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen6','img/Kooltivo.png','img/Tecnologia.png')"
+        />
+        <img
+          id="miImagen4"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen4','img/Kooltivo.png','img/Finanzas.png')"
+        />
+        <img
+          id="miImagen3"
+          src="img/Kooltivo.png"
+          alt="Imagen 1"
+          onclick="cambiarImagen('miImagen3','img/Kooltivo.png','img/Equidad.png')"
+        />
+      </div>
+    </div>
+    <script>
+      function cambiarImagen(id, img1, img2) {
+        const miImagen = document.getElementById(id);
+        if (miImagen.src.endsWith(img1)) {
+          miImagen.src = img2;
+        } else {
+          miImagen.src = img1;
+        }
+      }
+    </script>
+  </body>
+</html>
